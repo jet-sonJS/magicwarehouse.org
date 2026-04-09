@@ -1,11 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
 * {
   box-sizing: border-box;
+  font-family: Ubuntu, cursive;
+}
+
+::selection {
+  background-color: #0083c5cc;
+  color: white;
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #000a319d; /*temporary, until I find a good background image */
+    /* background-color: #efeff1; */
+    background: url("https://wallpapercave.com/wp/wp11470883.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 nav {
@@ -13,8 +23,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0.3rem;
-    background-color: #000a31cd;
-    color: #fff;
+    background-color: #2314e0;
+    color: white;
+    z-index: 1000;
 }
 
 ul {
@@ -23,33 +34,62 @@ ul {
     gap: 1.5rem;
 }
 
-a {
-    color: #fff;
+li a {
+    color: white;
     text-decoration: none;
+    padding: 20px;
+    margin: 0 -12px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-a:hover {
-    text-decoration: underline;
+li a:hover {
+    /* text-decoration: underline; */
+    background-color: #c4c4ffcd;
 }
 
-a[disabled] {
-    color: #ffffffd5;
+li a[disabled] {
+    color: rgba(240, 248, 255, 0.821);
     text-decoration: none;
     pointer-events: none;
     cursor: not-allowed;
 }
 
+li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 50px;
+    top: 33px;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-in-out;
+}
+
+li img:hover {
+    transform: scale(1.2);
+}
+
 .active {
-    color: aliceblue;
-    text-decoration: underline;
-    font-size: large;
+    background-color: #adadffd1;
 }
 
 header {
-    background-color: #000a31cd;
-    color: #fff;
+    background-color: #2314e0;
+    color: white;
     text-align: center;
     padding: 1rem;
+    transition: font-size 0.2s ease-in-out;
+}
+
+.shrink-header {
+    padding: 0.5rem;
+    margin-top: 0;
+    font-size: 1rem;
+    height: 75px;
+}
+
+#container {
+    background-color: #2314e0;
 }
 
 h1 {
@@ -64,7 +104,7 @@ h1 span {
 p {
     font-size: 1.2rem;
     margin-top: 0.5rem;
-    color: #ffffffd5;
+    color: whitesmoke;
 }
 
 section {
@@ -73,7 +113,7 @@ section {
     gap: 1rem;
     justify-content: center;
     padding: 2rem;
-    color: white;
+    color: black;
 }
 
 section h2 {
@@ -96,7 +136,7 @@ section h2 {
   clear: both;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .product-card {
     width: 100%;
     display: block;
@@ -105,10 +145,15 @@ section h2 {
 }
 
 .product-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.317);
   padding: 16px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #efeff1;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 10px #c1ccff7d, 0 0 15px #99adff80, 0 0 20px #c2ceff79, 0 0 25px #8ba4ff76;
 }
 
 .product-card img {
@@ -121,14 +166,41 @@ section h2 {
 }
 
 .product-card small {
-  color: #ffffffd5;
+  color: black;
 }
 
-.product-card button {
-    background-color: #000a31cd;
+.product-card button, .product-info button {
+    background-color: #144ae0;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 10px;
+    transition: background-color 0.1s ease-in-out;
+    border-radius: 5px;
+}
+
+.product-card button:hover {
+    background-color: #0f3db5;
+}
+
+.img-container {
+    float: left;
+}
+
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  width: 300px;
+  height: 300px;
 }
