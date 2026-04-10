@@ -1,5 +1,5 @@
 const productCard = `<div class="product-card">
-                <img src="product.jpg" alt="Product Image">
+                <img src="product_img.jpg" alt="Product Image">
                 <h3>Product Name</h3>
                 <small>Product description.</small><br><br>
                 <a href="product_info.html"><button>See more</button></a>
@@ -7,6 +7,15 @@ const productCard = `<div class="product-card">
 
 const section = document.querySelector('section');
 
-for (let i = 0; i < 12; i++) {
+let numProducts = 15;
+
+for (let i = 0; i < numProducts; i++) {
     section.innerHTML += productCard;
+}
+
+function loadMoreProducts() {
+    numProducts += 15;
+    for (let i = 0; i < numProducts; i++) {
+        section.innerHTML += productCard;
+    }
 }

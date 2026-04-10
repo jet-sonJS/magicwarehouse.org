@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAGICWAREHOUSE.org - Products</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png">
 </head>
 <body>
     <div id="container">
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="products.html" class="active">Products</a></li>
             <li><a href="#" title="You can't click me, buddy. Sorry." disabled>About</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
             <li><a href="#" title="Can't click me either. Sorry about that." disabled>Contact</a></li>
-            <li><img src="product.png" alt="MAGICWAREHOUSE.org Logo" id="logo"></li>
+            <li><img src="logo.png" alt="MAGICWAREHOUSE.org Logo" id="logo"></li>
         </ul>
     </nav>
 
@@ -23,7 +24,9 @@
         <p>Discover our wide range of magical items!</p>
     </header>
     </div>
-    <section><!-- Cards will go here --></section>
+    <section>
+    </section>
+    <button onclick="loadMoreProducts()" class="button" style="margin-left: 47%; margin-bottom: 25px; padding: 13px 20px;">Load More...</button>
     <script src="script.js"></script>
 </body>
 </html>
