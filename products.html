@@ -10,22 +10,26 @@
 <body>
     <div id="container">
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#" title="You can't click me, buddy. Sorry." disabled>About</a></li>
-            <li><a href="products.html" class="active">Products</a></li>
-            <li><a href="#" title="Can't click me either. Sorry about that." disabled>Contact</a></li>
-            <li><img src="logo.png" alt="MAGICWAREHOUSE.org Logo" id="logo"></li>
-        </ul>
-    </nav>
+  <div class="nav-inner">
+    <img src="logo.png" alt="MAGICWAREHOUSE.org Logo" id="logo">
+
+    <button class="burger" onclick="toggleMenu()">☰</button>
+
+    <ul id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" title="You can't click me, buddy. Sorry." class="disabled">About</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="#" title="Can't click me either. Sorry about that." class="disabled">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
     <header id="header">
         <h1>Our Magical Products</h1>
         <p>Discover our wide range of magical items!</p>
     </header>
     </div>
-    <section>
-    </section>
+    <section class="product-grid"></section>
     <button onclick="loadMoreProducts()" class="button" style="margin-left: 47%; margin-bottom: 25px; padding: 13px 20px;">Load More...</button>
     <script src="script.js"></script>
 </body>

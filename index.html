@@ -11,14 +11,19 @@
     <!-- Search nav bar, header content etc -->
 <div id="container">
      <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="#" title="You can't click me, buddy. Sorry." disabled>About</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="#" title="Can't click me either. Sorry about that." disabled>Contact</a></li>
-            <li><img src="logo.png" alt="MAGICWAREHOUSE.org Logo" id="logo"></li>
-        </ul>
-    </nav>
+  <div class="nav-inner">
+    <img src="logo.png" alt="MAGICWAREHOUSE.org Logo" id="logo">
+
+    <button class="burger" onclick="toggleMenu()">☰</button>
+
+    <ul id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#" title="You can't click me, buddy. Sorry." class="disabled">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="#" title="Can't click me either. Sorry about that." class="disabled">Contact</a></li>
+    </ul>
+  </div>
+</nav>
     <header id="header">
         <h1>Welcome to <span>MAGICWAREHOUSE.ORG</span></h1>
         <p>Your one-stop shop for all things magical!</p>
@@ -51,6 +56,7 @@
                 <small>Product description.</small><br><br>
                 <a href="products.html"><button>See more</button></a>
             </div>
+        </div>
     </section>
     <!-- <script src="script.js"></script> -->
 </body>
