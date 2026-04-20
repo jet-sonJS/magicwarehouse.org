@@ -9,21 +9,18 @@ const section = document.querySelector('.product-grid');
 
 let numProducts = 15;
 
-for (let i = 0; i < numProducts; i++) {
-    section.innerHTML += productCard;
-}
-
-function loadMoreProducts() {
-    const newProducts = 15;
-
-    for (let i = 0; i < newProducts; i++) {
+document.addEventListener('DOMContentLoaded', () => {
+    for (let i = 0; i < numProducts; i++) {
         section.innerHTML += productCard;
     }
 
-    numProducts += newProducts;
-}
+    function loadMoreProducts() {
+        const newProducts = 15;
 
-function toggleMenu() {
-  const nav = document.getElementById("navLinks");
-  nav.classList.toggle("open");
-}
+        for (let i = 0; i < newProducts; i++) {
+            section.innerHTML += productCard;
+        }
+
+        numProducts += newProducts;
+    }
+});

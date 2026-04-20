@@ -16,7 +16,7 @@ nav {
   top: 0;
   width: 100%;
   padding: 12px 30px;
-
+  z-index: 10000;
   display: flex;
   justify-content: center;
 
@@ -230,6 +230,7 @@ button:hover, .button:hover {
     0 0 12px #5d00ff,
     0 0 25px #00a6ff;
 }
+
 @media (max-width: 900px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -266,7 +267,7 @@ nav ul {
 
   nav ul {
     gap: 8px;
-    font-size: 14px;
+    font-size: 2vw;
   }
 
   #header h1 {
@@ -315,61 +316,13 @@ nav ul {
   justify-content: space-between;
 }
 
-.burger {
-  display: none;
-  font-size: 6vw;
-  background: none;
-  border: none;
-  color: #c7d2fe;
-  cursor: pointer;
-}
-
-#navLinks {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .disabled {
   opacity: 0.4;
   pointer-events: none;
 }
 
-@media (max-width: 700px) {
-  .burger {
-    display: block;
-  }
-
-  #navLinks {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-
-    flex-direction: column;
-    background: rgba(5, 5, 15, 0.95);
-    backdrop-filter: blur(12px);
-
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  #navLinks.open {
-    max-height: 300px;
-    padding: 15px 0;
-  }
-
-  #navLinks li {
-    padding: 10px 0;
-  }
-}
-
 body {
-  font-size: 1.2vw;
+  font-size: 2vw;
 }
 
 h1 {
@@ -385,5 +338,83 @@ h3 {
 }
 
 p, small, a, button {
-  font-size: 1.2vw;
+  font-size: 2vw;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 2vw;
+  cursor: pointer;
+  color: white;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 4vw;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    background: rgba(5, 5, 15, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1300px) {
+  body {
+    font-size: 1.5vw;
+  }
+
+  h1 {
+    font-size: 3vw;
+  }
+
+  h2 {
+    font-size: 2.5vw;
+  }
+
+  h3 {
+    font-size: 1.5vw;
+  }
+
+  p, small, a, button {
+    font-size: 1.5vw;
+  }
+
+  #menu-toggle {
+    font-size: 3vw;
+  }
 }
