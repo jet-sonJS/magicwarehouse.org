@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAGICWAREHOUSE.org - Products</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="https://img.freepik.com/free-vector/bright-colored-neon-frame_52683-73043.jpg">
 </head>
 <body>
+     <div id="container">
     <nav>
   <div class="nav-inner">
-    <img src="logo.png" alt="MAGICWAREHOUSE.org Logo" id="logo">
+    <img src="https://img.freepik.com/free-vector/bright-colored-neon-frame_52683-73043.jpg" alt="MAGICWAREHOUSE.org Logo" id="logo">
     <div id="menu-toggle">☰</div>
-    <ul id="navLinks">
+    <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="#" title="You can't click me, buddy. Sorry." class="disabled">About</a></li>
       <li><a href="products.html" class="active">Products</a></li>
-      <li><a href="#" title="Can't click me either. Sorry about that." class="disabled">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
+</div>
     <section class="img-container">
         <div class="img-zoom-container">
             <img id="myimage" src="product_img.jpg" width="300" height="240" alt="Product Image">
@@ -27,12 +29,14 @@
         </div>
         <div class="product-info">
             <h1>Product Name</h1>
-            <p>Product description goes here. This is a detailed description of the product, its features, and benefits.<br>Product description goes here. This is a detailed description of the product, its features, and benefits.<br>Product description goes here. This is a detailed description of the product, its features, and benefits.<br>Product description goes here. This is a detailed description of the product, its features, and benefits.<br>Product description goes here. This is a detailed description of the product, its features, and benefits.<br>Product description goes here. This is a detailed description of the product, its features, and benefits.<br>Product description goes here. This is a detailed description of the product, its features, and benefits.</p>
+            <p>
+                Product description goes here. This is a detailed description of the product, its features, and benefits.<br>Product description goes here. This is a detailed description of the product, its features, and benefits.<br>Product description goes here. This is a detailed description of the product, its features, and benefits.
+            </p>
             <button onclick="window.history.back()">Back</button>
+            <button disabled class="disabled">Buy</button>
         </div>
     </section>
     <script src="script2.js"></script>
-    <script src="script3.js"></script>
     <script>
         imageZoom("myimage", "myresult");
     </script>

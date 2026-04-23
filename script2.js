@@ -12,12 +12,13 @@ function imageZoom(imgID, resultID) {
     const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
     const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
 
-    const xPercent = (x / rect.width) * 100;
-    const yPercent = (y / rect.height) * 100;
+    const xPercent = (x / rect.width) * 200;
+    const yPercent = (y / rect.height) * 200;
 
     result.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
   }
 
+  result.style.transition = "display 0.3s";
   function show() {
     result.style.display = "block";
   }
@@ -35,7 +36,9 @@ function imageZoom(imgID, resultID) {
   img.addEventListener("touchend", hide);
 }
 
-function toggleMenu() {
-  const nav = document.getElementById("navLinks");
-  nav.classList.toggle("open");
-}
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});

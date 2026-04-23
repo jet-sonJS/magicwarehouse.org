@@ -11,6 +11,11 @@ body {
   color: #e2e8f0;
 }
 
+::selection {
+  background: #2600ff68;
+  color: white;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -19,7 +24,6 @@ nav {
   z-index: 10000;
   display: flex;
   justify-content: center;
-
   background: rgba(5, 5, 15, 0.85);
   backdrop-filter: blur(12px);
 
@@ -40,7 +44,7 @@ nav ul {
 nav a {
   text-decoration: none;
   color: #c7d2fe;
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 8px;
   transition: 0.25s;
 }
@@ -58,7 +62,7 @@ nav a.active {
 }
 
 li a[disabled] {
-  opacity: 0.4;
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -72,11 +76,12 @@ li a[disabled] {
 }
 
 #container {
-  padding-top: 90px;
+  padding-top: 30px;
   text-align: center;
 }
 
 #header h1 {
+  margin-top: 100px;
   font-size: 2.5rem;
   color: #c4b5fd;
   text-shadow:
@@ -106,25 +111,25 @@ section h2 {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 0.25fr);
   gap: 15px;
 }
 
 .product-card {
   background: rgba(10, 10, 25, 0.7);
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 15px;
   backdrop-filter: blur(10px);
   transition: 0.25s;
   box-shadow:
     0 0 8px #5d00ff,
-    0 0 15px rgba(0, 166, 255, 0.4);
+    0 0 10px rgba(0, 166, 255, 0.4);
   width: 100%;
 }
 
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
   box-shadow:
     0 0 12px #5d00ff,
     0 0 25px #00a6ff;
@@ -173,10 +178,10 @@ button:hover, .button:hover {
   max-width: 420px;
   padding: 20px;
   border-radius: 15px;
-
   background: rgba(10, 10, 25, 0.7);
   backdrop-filter: blur(10px);
-
+  margin-top: -52px;
+  margin-bottom: -20px;
   box-shadow:
     0 0 10px #5d00ff,
     0 0 20px rgba(0, 166, 255, 0.5);
@@ -200,11 +205,11 @@ button:hover, .button:hover {
 
 .img-zoom-container {
   position: relative;
+  margin-top: -50px;
 }
 
 .img-zoom-lens {
   position: absolute;
-  border: 1px solid #5d00ff;
   width: 50px;
   height: 50px;
 }
@@ -212,7 +217,7 @@ button:hover, .button:hover {
 .img-zoom-result {
   border: 1px solid #00a6ff;
   width: 320px;
-  height: 260px;
+  height: 215px;
   border-radius: 10px;
   box-shadow:
     0 0 10px #5d00ff,
@@ -317,7 +322,7 @@ nav ul {
 }
 
 .disabled {
-  opacity: 0.4;
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -416,5 +421,36 @@ p, small, a, button {
 
   #menu-toggle {
     font-size: 3vw;
+  }
+}
+
+input[type="text"], input[type="email"], textarea {
+  font-family: 'Afacad Flux', sans-serif;
+  font-size: 1.1vw;
+  width: 60%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(10, 10, 25, 0.7);
+  color: #cbd5f5;
+  box-shadow:
+    inset 0 0 5px #5d00ff,
+    inset 0 0 10px rgba(0, 166, 255, 0.4);
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
+  color: #94a3b8;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  outline: none;
+  box-shadow:
+    inset 0 0 8px #5d00ff,
+    inset 0 0 15px rgba(0, 166, 255, 0.5);
+}
+
+@media (max-width: 900px) {
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
   }
 }
