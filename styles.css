@@ -5,10 +5,13 @@
   font-family: 'Afacad Flux', sans-serif;
 }
 
+html,
 body {
   margin: 0;
   background: #000;
   color: #e2e8f0;
+  overflow-x: hidden;
+  font-size: 2vw;
 }
 
 ::selection {
@@ -82,7 +85,7 @@ li a[disabled] {
 
 #header h1 {
   margin-top: 100px;
-  font-size: 2.5rem;
+  font-size: 3vw;
   color: #c4b5fd;
   text-shadow:
     0 0 10px #5d00ff,
@@ -148,7 +151,8 @@ section h2 {
   color: #94a3b8;
 }
 
-button, .button {
+button,
+.button {
   background: linear-gradient(90deg, #5d00ff, #00a6ff);
   border: none;
   padding: 10px 18px;
@@ -158,7 +162,8 @@ button, .button {
   transition: 0.25s;
 }
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   transform: scale(1.05);
   box-shadow:
     0 0 10px #5d00ff,
@@ -248,10 +253,6 @@ button:hover, .button:hover {
   }
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 nav ul {
   flex-wrap: wrap;
   justify-content: center;
@@ -276,7 +277,14 @@ nav ul {
   }
 
   #header h1 {
-    font-size: 1.8rem;
+    font-size: 8vw;
+  }
+
+  #header p,
+  .product-card small,
+  .product-info p,
+  .product-card h3 {
+    font-size: 4vw;
   }
 
   section {
@@ -326,10 +334,6 @@ nav ul {
   pointer-events: none;
 }
 
-body {
-  font-size: 2vw;
-}
-
 h1 {
   font-size: 4vw;
 }
@@ -342,7 +346,10 @@ h3 {
   font-size: 2vw;
 }
 
-p, small, a, button {
+p,
+small,
+a,
+button {
   font-size: 2vw;
 }
 
@@ -351,19 +358,6 @@ p, small, a, button {
   font-size: 2vw;
   cursor: pointer;
   color: white;
-}
-
-#menu-toggle {
-  display: none;
-  font-size: 4vw;
-  cursor: pointer;
-  color: white;
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 @media (max-width: 700px) {
@@ -415,7 +409,10 @@ p, small, a, button {
     font-size: 1.5vw;
   }
 
-  p, small, a, button {
+  p,
+  small,
+  a,
+  button {
     font-size: 1.5vw;
   }
 
@@ -424,7 +421,9 @@ p, small, a, button {
   }
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
   font-family: 'Afacad Flux', sans-serif;
   font-size: 1.1vw;
   width: 60%;
@@ -438,11 +437,15 @@ input[type="text"], input[type="email"], textarea {
     inset 0 0 10px rgba(0, 166, 255, 0.4);
 }
 
-input[type="text"]::placeholder, input[type="email"]::placeholder, textarea::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
   color: #94a3b8;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+input[type="text"]:focus, 
+input[type="email"]:focus,
+textarea:focus {
   outline: none;
   box-shadow:
     inset 0 0 8px #5d00ff,
@@ -450,7 +453,9 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 }
 
 @media (max-width: 900px) {
-  input[type="text"], input[type="email"], textarea {
+  input[type="text"],
+  input[type="email"],
+  textarea {
     width: 100%;
   }
 }

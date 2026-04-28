@@ -11,8 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Form Submitted:", { name, email, message });
 
         alert("Thank you for your message! We will get back to you soon.");
-        // for now, cant really submit the form anywhere, so just reset it after submission
-        // really need to somehow install php
+
+        // for now, can't really submit the form anywhere, so just reset it after submission
+        // really need to somehow install php to handle the email sending, but that's a step up
         form.reset();
     });
 });

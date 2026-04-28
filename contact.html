@@ -28,19 +28,20 @@
   </div>
 
     <section class="contact-form">
-        <form id="contactForm">
+        <form action="contact_submit.js" id="contactForm">
+            <input type="hidden" name="access_key" value="a2b1611e-7229-4b6c-b165-8659083a94c7">
             <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="e.g. Kiera Johnson" required><br><br>
+            <input type="text" id="name" name="name" placeholder="e.g. Kiera Johnson" autocomplete="off" required><br><br>
 
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="e.g. kiera123@example.com" required><br><br>
+            <input type="email" id="email" name="email" placeholder="e.g. kiera123@example.com" autocomplete="off" required><br><br>
 
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea><br><br>
 
             <button type="submit">Submit</button>
         </form>
-
+        <div id="result"></div>
         <script src="contact_submit.js"></script>
     </section>
 </body>
